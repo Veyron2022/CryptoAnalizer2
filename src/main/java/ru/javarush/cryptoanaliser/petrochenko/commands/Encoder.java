@@ -4,6 +4,7 @@ import ru.javarush.cryptoanaliser.petrochenko.Exceptions.ApplicationException;
 import ru.javarush.cryptoanaliser.petrochenko.Util.PathFinder;
 import ru.javarush.cryptoanaliser.petrochenko.constants.Parameters;
 import ru.javarush.cryptoanaliser.petrochenko.constants.Strings;
+import ru.javarush.cryptoanaliser.petrochenko.controller.GetCommand;
 import ru.javarush.cryptoanaliser.petrochenko.entity.Result;
 
 import java.io.FileWriter;
@@ -62,7 +63,7 @@ public class Encoder {
             }
 
 
-            return new Result ();
+            return new Result();
           //  return new Result(ResultCode.OK, "read all bytes" + txtFile);
 
         }

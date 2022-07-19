@@ -4,6 +4,7 @@ import ru.javarush.cryptoanaliser.petrochenko.Exceptions.ApplicationException;
 import ru.javarush.cryptoanaliser.petrochenko.Util.PathFinder;
 import ru.javarush.cryptoanaliser.petrochenko.constants.Messeges;
 import ru.javarush.cryptoanaliser.petrochenko.constants.Strings;
+import ru.javarush.cryptoanaliser.petrochenko.controller.Commands;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,7 +15,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DecoderOne {
-    public DecoderOne() {
+    public DecoderOne(String[]parameters) {
+        parameters  = Commands.parameters;
         System.out.println(Messeges.intKey);
         Scanner scanner = new Scanner(System.in);
        // String[] parameters = new String[]{"encrypted.txt", "decrypted.txt"};

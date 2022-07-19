@@ -1,17 +1,18 @@
 package ru.javarush.cryptoanaliser.petrochenko;
 
-import ru.javarush.cryptoanaliser.petrochenko.Exceptions.ApplicationException;
-import ru.javarush.cryptoanaliser.petrochenko.commands.DecoderOne;
-import ru.javarush.cryptoanaliser.petrochenko.commands.EncoderOne;
-import ru.javarush.cryptoanaliser.petrochenko.controller.MainController;
+import ru.javarush.cryptoanaliser.petrochenko.controller.Commands;
+import ru.javarush.cryptoanaliser.petrochenko.controller.GetCommand;
 
 import java.util.Scanner;
 
 public class Runner {
     public static void main(String[] args) {
         System.out.println(MainMenu.mainManu);
-
-       // MainController mainController = new MainController();
+        Commands commands = new Commands();
+//        Scanner console = new Scanner(System.in);
+//        String value = console.nextLine();
+//        MainController mainController = new MainController();
+      //  GetCommand getCommand = new GetCommand(value);
        // Application application = new Application()
 
 

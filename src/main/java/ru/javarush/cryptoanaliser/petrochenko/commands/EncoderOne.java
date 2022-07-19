@@ -4,6 +4,7 @@ import ru.javarush.cryptoanaliser.petrochenko.Exceptions.ApplicationException;
 import ru.javarush.cryptoanaliser.petrochenko.Util.PathFinder;
 import ru.javarush.cryptoanaliser.petrochenko.constants.Messeges;
 import ru.javarush.cryptoanaliser.petrochenko.constants.Strings;
+import ru.javarush.cryptoanaliser.petrochenko.controller.Commands;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,16 +15,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EncoderOne {
-
-    public EncoderOne() {
-        System.out.println(Messeges.intKey);
-        Scanner scanner = new Scanner(System.in);
+    public EncoderOne(String[]parameters) {
+        parameters = Commands.parameters;
         //String[] parameters = new String[]{"text.txt", "encrypted.txt"};
         //Path txtFile = Path.of("D:\\Programmer\\texts\\text.txt");
-        Path txtFile = Path.of(PathFinder.getRoot()+"text.txt");
+//        Path txtFile = Path.of(PathFinder.getRoot()+"text.txt");
+//        Path encryptedFile = Path.of(PathFinder.getRoot()+"encoded.txt");
+        Path txtFile = Path.of(parameters[0]);
         Path encryptedFile = Path.of(PathFinder.getRoot()+"encoded.txt");
        // Path encryptedFile = Path.of("D:\\Programmer\\texts\\encoded.txt");
-        int key = scanner.nextInt();
+        int key = Integer.parseInt(parameters[2]);
         char[] alphabet = Strings.ALPHABET.toCharArray();
         List<String> strings2 = new ArrayList<>();
         if (key >= alphabet.length) {
