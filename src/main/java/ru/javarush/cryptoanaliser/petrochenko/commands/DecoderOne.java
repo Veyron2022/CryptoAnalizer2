@@ -16,15 +16,10 @@ import java.util.Scanner;
 
 public class DecoderOne {
     public DecoderOne(String[]parameters) {
-        parameters  = Commands.parameters;
-        System.out.println(Messeges.intKey);
-        Scanner scanner = new Scanner(System.in);
-       // String[] parameters = new String[]{"encrypted.txt", "decrypted.txt"};
-//        Path path = Path.of("D:\\Programmer\\texts\\encoded.txt");
-//        Path path1 = Path.of("D:\\Programmer\\texts\\decrypted.txt");
-        Path path = Path.of(PathFinder.getRoot()+"encoded.txt");
-        Path path1 = Path.of(PathFinder.getRoot()+"decrypted.txt");
-        int key = scanner.nextInt();
+        parameters = Commands.parameters;
+        Path path = Path.of(parameters[0]);
+        Path path1 = Path.of(parameters[1]);
+        int key = Integer.parseInt(parameters[2]);
         char[] alphabet = Strings.ALPHABET.toCharArray();
         List<String> strings2 = new ArrayList<>();
         if (key > alphabet.length - 1) {
@@ -61,7 +56,7 @@ public class DecoderOne {
 
         try (FileWriter writer = new FileWriter(String.valueOf(path1))) {
             for (String s : strings2) {
-                writer.write(s +"\n");
+                writer.write(s+"\n");
             }  } catch (IOException e) {
             throw new ApplicationException("IO error", e);
         }

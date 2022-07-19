@@ -13,7 +13,7 @@ public enum Actions {
 
 
     //    String[] Actions(EncoderOne encoderOne) {
-//        return new String[]{"text.txt", "encrypted.txt", "123"};
+//        return new String[]{"text1.txt", "encrypted.txt", "123"};
 //    }
 
 

@@ -17,12 +17,14 @@ import java.util.Scanner;
 public class EncoderOne {
     public EncoderOne(String[]parameters) {
         parameters = Commands.parameters;
-        //String[] parameters = new String[]{"text.txt", "encrypted.txt"};
-        //Path txtFile = Path.of("D:\\Programmer\\texts\\text.txt");
-//        Path txtFile = Path.of(PathFinder.getRoot()+"text.txt");
+       // Scanner scanner = new Scanner(System.in);
+        //parameters[2]=scanner.nextLine();
+        //String[] parameters = new String[]{"text1.txt", "encrypted.txt"};
+        //Path txtFile = Path.of("D:\\Programmer\\texts\\text1.txt");
+//        Path txtFile = Path.of(PathFinder.getRoot()+"text1.txt");
 //        Path encryptedFile = Path.of(PathFinder.getRoot()+"encoded.txt");
         Path txtFile = Path.of(parameters[0]);
-        Path encryptedFile = Path.of(PathFinder.getRoot()+"encoded.txt");
+        Path encryptedFile = Path.of(parameters[1]);
        // Path encryptedFile = Path.of("D:\\Programmer\\texts\\encoded.txt");
         int key = Integer.parseInt(parameters[2]);
         char[] alphabet = Strings.ALPHABET.toCharArray();
