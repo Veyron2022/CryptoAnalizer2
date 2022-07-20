@@ -2,7 +2,7 @@ package ru.javarush.cryptoanaliser.petrochenko.entity;
 
 
 import ru.javarush.cryptoanaliser.petrochenko.controller.Commands;
-import ru.javarush.cryptoanaliser.petrochenko.controller.GetCommand;
+
 
 public class Result {
 

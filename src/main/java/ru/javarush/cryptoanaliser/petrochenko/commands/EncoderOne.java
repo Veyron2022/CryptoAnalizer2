@@ -55,7 +55,7 @@ public class EncoderOne {
         }
         try (FileWriter writer = new FileWriter(String.valueOf(encryptedFile))) {
             for (String s : strings2) {
-                writer.write(s);
+                writer.write(s+"\n");
             }
         } catch (IOException e) {
             throw new ApplicationException("IO error", e);

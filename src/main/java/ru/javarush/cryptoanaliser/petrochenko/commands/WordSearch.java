@@ -1,17 +1,36 @@
 package ru.javarush.cryptoanaliser.petrochenko.commands;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+
 public class WordSearch {
-    public String []containsArray = {", ", ". ","не","нет"};
+    public String[] containsArray = {", ", ". ", "не", "нет", "в ", "да"};
 
 
-    public int wordSearch(String string){
-    int count = 0;
-    for (int i = 0; i < containsArray.length; i++) {
-        if(string.contains(containsArray[i])){
-            count++;
+
+    public boolean wordSearch(String string) throws IOException {
+        Path path = Path.of(string);
+        int count = 0;
+        try {
+            List<String> strings = Files.readAllLines(path);
+            for (String s : strings) {
+                for (int i = 0; i < containsArray.length; i++) {
+                    String str = containsArray[i];
+                    if (s.contains(str)){
+                        count++;
                     }
-    }
-    return count;
-}
+                }
+            }
+           if (count>=3) {
+               return true;
+           }
+        } catch (IOException e) {
+            throw new IOException(e);
+        }
 
+
+        return false;
+    }
 }

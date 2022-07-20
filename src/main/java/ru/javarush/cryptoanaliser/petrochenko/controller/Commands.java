@@ -4,22 +4,26 @@ import ru.javarush.cryptoanaliser.petrochenko.Util.PathChoice;
 import ru.javarush.cryptoanaliser.petrochenko.commands.BroodForce;
 import ru.javarush.cryptoanaliser.petrochenko.commands.DecoderOne;
 import ru.javarush.cryptoanaliser.petrochenko.commands.EncoderOne;
+import ru.javarush.cryptoanaliser.petrochenko.constants.Messeges;
+import ru.javarush.cryptoanaliser.petrochenko.constants.Strings;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Commands {
     public static String[] parameters;
     public static String command;
 
-    public Commands() {
+    public Commands() throws IOException {
+       // PathChoice pathChoice = new PathChoice();
         Scanner console = new Scanner(System.in);
         command = console.nextLine();
         if (command.equals("1")) {
-            System.out.println("Enter key");
+            System.out.print("Enter key: ");
             String key = console.nextLine();
             parameters = new String[]{String.valueOf(PathChoice.txtPath), String.valueOf(PathChoice.encryptedPath), key};
         } else if (command.equals("2")) {
-            System.out.println("Enter key");
+            System.out.print("Enter key: ");
             String key = console.nextLine();
             parameters = new String[]{String.valueOf(PathChoice.encryptedPath), String.valueOf(PathChoice.decryptedPath), key};
         } else if (command.equals("3")) {
