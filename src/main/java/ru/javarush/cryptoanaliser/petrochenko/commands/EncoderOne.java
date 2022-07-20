@@ -60,6 +60,7 @@ public class EncoderOne {
         } catch (IOException e) {
             throw new ApplicationException("IO error", e);
         }
+        System.out.println(Messeges.ooperationCompleted);
     }
 }
 

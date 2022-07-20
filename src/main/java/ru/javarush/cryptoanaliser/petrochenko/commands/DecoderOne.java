@@ -1,5 +1,6 @@
 package ru.javarush.cryptoanaliser.petrochenko.commands;
 
+import org.w3c.dom.ls.LSOutput;
 import ru.javarush.cryptoanaliser.petrochenko.Exceptions.ApplicationException;
 import ru.javarush.cryptoanaliser.petrochenko.Util.PathFinder;
 import ru.javarush.cryptoanaliser.petrochenko.constants.Messeges;
@@ -61,7 +62,4 @@ public class DecoderOne {
             throw new ApplicationException("IO error", e);
         }
     }
-
-
-
 }

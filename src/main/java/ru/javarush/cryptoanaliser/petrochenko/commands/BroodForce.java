@@ -1,6 +1,7 @@
 package ru.javarush.cryptoanaliser.petrochenko.commands;
 
 import ru.javarush.cryptoanaliser.petrochenko.Exceptions.ApplicationException;
+import ru.javarush.cryptoanaliser.petrochenko.constants.Messeges;
 import ru.javarush.cryptoanaliser.petrochenko.constants.Strings;
 import ru.javarush.cryptoanaliser.petrochenko.controller.Commands;
 
@@ -29,6 +30,6 @@ public class BroodForce {
             throw new RuntimeException(e);
         }
 
-
+       // System.out.println(Messeges.ooperationCompleted);
     }
 }

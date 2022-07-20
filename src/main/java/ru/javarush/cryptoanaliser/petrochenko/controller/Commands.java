@@ -12,12 +12,22 @@ import java.util.Scanner;
 
 public class Commands {
     public static String[] parameters;
+
+
     public static String command;
 
+
     public Commands() throws IOException {
-       // PathChoice pathChoice = new PathChoice();
+        // PathChoice pathChoice = new PathChoice();
         Scanner console = new Scanner(System.in);
-        command = console.nextLine();
+        int value;
+        do {
+            System.out.println(Messeges.selectOperation);
+            value = Integer.parseInt(console.nextLine());
+            command = String.valueOf(value);
+        } while (value < 1 || value > 4);
+
+
         if (command.equals("1")) {
             System.out.print("Enter key: ");
             String key = console.nextLine();
@@ -31,13 +41,20 @@ public class Commands {
             parameters = new String[]{String.valueOf(PathChoice.encryptedPath), String.valueOf(PathChoice.decodedPath), key};
         }
 
+
         if (command.equals("1")) {
             new EncoderOne(parameters);
         } else if (command.equals("2")) {
             new DecoderOne(parameters);
         } else if (command.equals("3")) {
             new BroodForce(parameters);
+        } else if (command.equals("4")) {
+            System.out.println("Exit");
+            return;
         }
 
+
     }
+
 }
+

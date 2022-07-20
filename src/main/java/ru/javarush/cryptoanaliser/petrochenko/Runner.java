@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Runner {
     public static void main(String[] args) throws IOException {
-        System.out.println(MainMenu.mainManu);
+        System.out.print(MainMenu.mainManu);
         Commands commands = new Commands();
     }
 }

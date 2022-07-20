@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.util.List;
 
 public class WordSearch {
-    public String[] containsArray = {", ", ". ", "не", "нет", "в ", "да"};
+    public String[] containsArray = {", ", ". ", "не ", "нет"};
 
 
 
@@ -23,7 +23,7 @@ public class WordSearch {
                     }
                 }
             }
-           if (count>=3) {
+           if (count>10) {
                return true;
            }
         } catch (IOException e) {
